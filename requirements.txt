@@ -1,0 +1,8 @@
+streamlit
+phidata
+python-dotenv
+duckduckgo-search
+groq
+yfinance
+replicate
+PyPDF2
