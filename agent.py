@@ -11,6 +11,14 @@ st.set_page_config(
     page_icon="🌐",
     layout="wide"
 )
+st.markdown("""
+<style>
+[data-testid="stToolbar"] {
+display: none;
+}
+</style>
+""", unsafe_allow_html=True)
+
 st.title("Multimodal AI Agent 🌐🧐🔍")
 st.header("Powered by Mistral AI ")
 
@@ -18,8 +26,8 @@ st.header("Powered by Mistral AI ")
 st.markdown(
     """
     <style>
-    .stTextArea textarea {
-        height: 100px;
+    .stInputarea inputarea {
+        height: 1000px;
     }
     </style>
     """,
@@ -40,6 +48,7 @@ col1, col2 = st.columns([4, 1])
 
 with col1:
     question = st.text_area(label="Question", help="Write your question here")
+
 
 with col2:
     uploaded_file = st.file_uploader("", type=["txt", "pdf", "jpg", "png", "mp4"], label_visibility="collapsed")
