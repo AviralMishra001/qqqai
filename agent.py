@@ -38,7 +38,7 @@ st.markdown(
 def initialize_agent():
     return Agent(
         name="AI Agentic RAG",
-        model=Groq(id="mixtral-8x7b-32768"),
+        model=Groq(id="mistral-saba-24b"),
         tools=[DuckDuckGo, YFinanceTools, PythonTools],
         markdown=True,
     )
