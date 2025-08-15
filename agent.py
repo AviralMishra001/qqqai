@@ -38,7 +38,7 @@ st.markdown(
 def initialize_agent():
     return Agent(
         name="AI Agentic RAG",
-        model=Groq(id="mistral-saba-24b"),
+        model=Groq(id="openai/gpt-oss-20b"),
         tools=[DuckDuckGo, YFinanceTools, PythonTools],
         markdown=True,
     )
@@ -76,6 +76,7 @@ if st.button("🔍 Analyze Query", key="analyze_query_button"):
                   st.markdown(response.content)     
              except Exception as error:
                   st.error(f"An error occurred during analysis: {error}")
+
 
 
 
